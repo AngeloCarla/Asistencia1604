@@ -19,7 +19,7 @@ class Nave{
     }
    }
   if(direccion==1){
-   if(this.posicion.x + this.velocidad.x <= width-50){
+   if(this.posicion.x + this.velocidad.x <= width - 50){
     this.posicion.x+=this.velocidad.x;
     }
    }

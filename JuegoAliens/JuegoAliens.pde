@@ -6,16 +6,16 @@
 
  public void setup(){
   size(500,600);
-  fondo = loadImage("fondoEstelar.jpg");
+  fondo = loadImage("planetas.jpg");
   naveEspacial = new Nave();
   alien = new Ovni();
-  naveEspacial.setPosicion(new PVector(220,height/2));
+  naveEspacial.setPosicion(new PVector(0,500));
   naveEspacial.setVelocidad(new PVector(10,0));
   }
 
  public void draw(){
   background(#10111F);
-  image(fondo, 100, 1, 300, 600);
+  image(fondo, 0, 0, 500, 600);
   naveEspacial.dibujar();
   alien.dibujar();
   alien.mover();

@@ -1,16 +1,14 @@
-class Nave{
- private PVector posicion;
- private PVector velocidad;
-
+class Humano{
+ private PVector posicion = new PVector(0, 0);
+ private PVector velocidad = new PVector(10, 0);
   
- public Nave(){
-   //imagen
-  println("Nave");
-   }
+ public Humano(){
+  println("chico");
+  }
   
  public void dibujar(){
   rect(posicion.x,posicion.y,50,50);
-   }
+  }
   
  public void mover(int direccion){
   if(direccion==0){
@@ -27,17 +25,17 @@ class Nave{
  
  public PVector getPosicion(){
   return this.posicion;
-   }
+  }
  
  public void setPosicion(PVector posicion){
   this.posicion = posicion;
-   }
+  }
   
   public PVector getVelocidad(){
   return this.velocidad;
-   }
+  }
   
   public void setVelocidad(PVector velocidad){
    this.velocidad = velocidad;
-   }
   }
+ }

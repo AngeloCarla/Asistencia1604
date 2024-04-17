@@ -1,20 +1,22 @@
 class Ovni{
-  //private PVector posicion;
- // private PVector velocidad;
+ PImage ovni;
+ private PVector posicion;
+ private PVector velocidad;
   
  public Ovni(){
-   //imagen
-  println("Ovni");
-  //posicion = new PVector(this.posicion.x,this.posicion.y);
-  //velocidad = new PVector(10,0);
+   ovni = loadImage("OVNI.png");
+   posicion = new PVector(0,0);
+   velocidad = new PVector(8,0);
   }
-  
+
  public void dibujar(){
-  ellipse(50,100,80,80);
+  image(ovni, this.posicion.x, this.posicion.y, 300, 300);
   }
   
  public void mover(){
-   
+    this.posicion.x=this.posicion.x+this.velocidad.x;
+    if (this.posicion.x > width - 200|| this.posicion.x < -90){
+      velocidad.x = -velocidad.x;
+   }
   }
-
-}
+ }

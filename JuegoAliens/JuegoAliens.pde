@@ -1,30 +1,33 @@
- private Nave naveEspacial;
+ private Humano chico;
  private Ovni alien;
  PImage fondo;
+ color tinte = color(101, 94, 175);
  boolean izquierda = false;
  boolean derecha = false;
 
  public void setup(){
   size(500,600);
-  fondo = loadImage("planetas.jpg");
-  naveEspacial = new Nave();
+  fondo = loadImage("city.jpg");
+  chico = new Humano();
   alien = new Ovni();
-  naveEspacial.setPosicion(new PVector(0,500));
-  naveEspacial.setVelocidad(new PVector(10,0));
+  chico.setPosicion(new PVector(0,500));
+  chico.setVelocidad(new PVector(10,0));
   }
 
  public void draw(){
   background(#10111F);
-  image(fondo, 0, 0, 500, 600);
-  naveEspacial.dibujar();
+  tint(tinte);
+  image(fondo, 0, 0, 500,600);
+  noTint();
+  chico.dibujar();
   alien.dibujar();
   alien.mover();
 
   if (izquierda) {
-    naveEspacial.mover(0);
+    chico.mover(0);
    }
   if (derecha) {
-    naveEspacial.mover(1);
+    chico.mover(1);
    }
   }
  
@@ -46,13 +49,3 @@
      derecha = false;   
     }
    }  
- //public void mousePressed(){
-  //if(mouseButton == LEFT){
-   //naveEspacial.mover(0);
-   //println("izquierda");
-   //}
-  //if(mouseButton == RIGHT){
-   //naveEspacial.mover(1);
-   //println("derecha");
-  // }
-// }

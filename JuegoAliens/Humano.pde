@@ -1,12 +1,15 @@
 class Humano{
- private PVector posicion = new PVector(0, 0);
- private PVector velocidad = new PVector(10, 0);
+ private PVector posicion;
+ private PVector velocidad;
+ boolean izquierda = false;
+ boolean derecha = false;
   
  public Humano(){
   println("chico");
   }
   
  public void dibujar(){
+   fill(255);
   rect(posicion.x,posicion.y,50,50);
   }
   

@@ -1,51 +1,52 @@
  private Humano chico;
  private Ovni alien;
+ private Plataforma plataforma;
  PImage fondo;
- color tinte = color(101, 94, 175);
- boolean izquierda = false;
- boolean derecha = false;
+ color tinteF = color(101, 94, 175);
 
  public void setup(){
   size(500,600);
   fondo = loadImage("city.jpg");
   chico = new Humano();
   alien = new Ovni();
+  plataforma = new Plataforma();
   chico.setPosicion(new PVector(0,500));
   chico.setVelocidad(new PVector(10,0));
   }
 
  public void draw(){
   background(#10111F);
-  tint(tinte);
+  tint(tinteF);
   image(fondo, 0, 0, 500,600);
   noTint();
   chico.dibujar();
   alien.dibujar();
   alien.mover();
+  plataforma.dibujar();
 
-  if (izquierda) {
+  if (chico.izquierda) {
     chico.mover(0);
    }
-  if (derecha) {
+  if (chico.derecha) {
     chico.mover(1);
    }
   }
  
  public void mousePressed(){
   if(mouseButton == LEFT){
-   izquierda = true;
+   chico.izquierda = true;
    }
   
   if(mouseButton == RIGHT){
-   derecha = true;
+   chico.derecha = true;
    }
   }
  
  public void mouseReleased(){
    if(mouseButton == LEFT){
-     izquierda = false;
+     chico.izquierda = false;
     }
    if(mouseButton == RIGHT){
-     derecha = false;   
+     chico.derecha = false;   
     }
    }  

@@ -1,11 +1,11 @@
-class Ovni{
- PImage ovni;
- color tinteO = color(164,150,206);
+class Ovni{ 
  private PVector posicion = new PVector(0,0);
  private PVector velocidad = new PVector(8,0);
+ private PImage ovni;
+ private color tinteO = color(250,197,200);
   
  public Ovni(){
-  ovni = loadImage("OVNI.png");
+  this.ovni = loadImage("OVNI.png");
   }
 
  public void dibujar(){

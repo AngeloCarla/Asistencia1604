@@ -16,8 +16,9 @@
 
  public void draw(){
   background(#10111F);
-  tint(tinteF);
+  tint(this.tinteF);
   image(fondo, 0, 0, 500,600);
+  
   noTint();
   chico.dibujar();
   alien.dibujar();

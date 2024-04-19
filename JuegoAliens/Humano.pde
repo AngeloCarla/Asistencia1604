@@ -11,7 +11,7 @@ class Humano{
   }
   
  public void dibujar(){
-  tint(tinteL);
+  tint(this.tinteL);
   image(luka, this.posicion.x, 425, 150,150);
   }
   

@@ -9,7 +9,7 @@ class Ovni{
   }
 
  public void dibujar(){
-  tint(tinteO);
+  tint(this.tinteO);
   image(ovni, this.posicion.x, this.posicion.y, 300, 300);
   }
   
